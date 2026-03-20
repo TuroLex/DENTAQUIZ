@@ -1,3 +1,6 @@
+al quiz · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,9 +27,9 @@
     --shadow: 0 4px 24px rgba(15,30,46,0.08);
     --shadow-lg: 0 12px 48px rgba(15,30,46,0.14);
   }
-
+ 
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-
+ 
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -38,14 +41,14 @@
     padding: 0;
     overflow-x: hidden;
   }
-
+ 
   /* ── SCREENS ── */
   .screen { display: none; width: 100%; max-width: 520px; padding: 24px 20px 40px; flex-direction: column; align-items: center; min-height: 100vh; }
   .screen.active { display: flex; }
-
+ 
   /* ── HOME ── */
   #home { justify-content: center; gap: 0; }
-
+ 
   .logo-wrap { text-align: center; margin-bottom: 36px; }
   .logo-icon {
     width: 80px; height: 80px; margin: 0 auto 16px;
@@ -56,8 +59,10 @@
   .logo-icon svg { width: 46px; height: 46px; fill: white; }
   h1.brand { font-family: 'DM Serif Display', serif; font-size: 2.6rem; color: var(--text); letter-spacing: -1px; }
   h1.brand span { color: var(--accent); }
+ 
+ 
   .tagline { font-size: 0.95rem; color: var(--text2); margin-top: 6px; }
-
+ 
   .home-card {
     background: var(--surface); border-radius: var(--radius);
     padding: 28px 24px; width: 100%;
@@ -66,7 +71,7 @@
   }
   .home-card h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
   .home-card p { font-size: 0.875rem; color: var(--text2); line-height: 1.6; }
-
+ 
   .mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; margin-bottom: 20px; }
   .mode-btn {
     background: var(--surface); border: 2px solid var(--border);
@@ -79,7 +84,7 @@
   .mode-btn .mode-icon { font-size: 1.8rem; margin-bottom: 8px; }
   .mode-btn .mode-label { font-size: 0.8rem; font-weight: 600; color: var(--text); }
   .mode-btn .mode-sub { font-size: 0.72rem; color: var(--text2); margin-top: 2px; }
-
+ 
   /* ── BUTTONS ── */
   .btn {
     width: 100%; padding: 16px; border-radius: var(--radius);
@@ -90,7 +95,7 @@
   .btn-primary:active { transform: scale(0.98); }
   .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
   .btn-secondary:active { transform: scale(0.98); }
-
+ 
   /* ── HEADER BAR ── */
   .game-header {
     width: 100%; max-width: 520px;
@@ -106,11 +111,11 @@
     padding: 5px 14px; font-size: 0.8rem; font-weight: 600;
     color: var(--accent); white-space: nowrap;
   }
-
+ 
   /* ── TIMER ── */
   .timer-bar { width: 100%; height: 4px; background: var(--border); border-radius: 99px; overflow: hidden; }
   .timer-fill { height: 100%; border-radius: 99px; transition: width .1s linear, background .5s; }
-
+ 
   /* ── QUESTION CARD ── */
   .q-wrap { width: 100%; padding: 16px 20px 20px; }
   .q-card {
@@ -124,14 +129,14 @@
     background: var(--accent-light); color: var(--accent); margin-bottom: 12px;
   }
   .q-text { font-size: 1.05rem; font-weight: 500; line-height: 1.5; color: var(--text); }
-
+ 
   /* ── DENTAL SVG ── */
   .tooth-diagram {
     background: var(--surface2); border: 1px solid var(--border); border-radius: 12px;
     padding: 12px; margin-top: 14px; overflow: hidden;
   }
   .tooth-diagram svg { width: 100%; max-width: 340px; display: block; margin: 0 auto; }
-
+ 
   /* ── OPTIONS ── */
   .options-wrap { width: 100%; padding: 0 20px 24px; display: flex; flex-direction: column; gap: 10px; }
   .opt-btn {
@@ -155,7 +160,7 @@
   .opt-btn.wrong { border-color: var(--error); background: var(--error-bg); }
   .opt-btn.wrong .opt-letter { background: var(--error); color: white; }
   .opt-btn.locked { cursor: default; }
-
+ 
   .feedback-banner {
     width: calc(100% - 40px); margin: 0 20px 16px;
     border-radius: var(--radius); padding: 14px 18px;
@@ -165,10 +170,10 @@
   .feedback-banner.show { display: block; }
   .feedback-banner.correct-fb { background: var(--success-bg); color: #065f46; border: 1px solid #a7f3d0; }
   .feedback-banner.wrong-fb { background: var(--error-bg); color: #991b1b; border: 1px solid #fca5a5; }
-
+ 
   .next-btn-wrap { width: 100%; padding: 0 20px 20px; display: none; }
   .next-btn-wrap.show { display: block; }
-
+ 
   /* ── RESULTS ── */
   #results { justify-content: center; gap: 0; }
   .result-hero { text-align: center; margin-bottom: 28px; }
@@ -188,14 +193,14 @@
   .score-denom { font-size: 0.75rem; color: var(--text2); }
   .result-title { font-family: 'DM Serif Display', serif; font-size: 1.6rem; }
   .result-sub { font-size: 0.9rem; color: var(--text2); margin-top: 6px; }
-
+ 
   .stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; width: 100%; margin-bottom: 20px; }
   .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; }
   .stat-val { font-size: 1.4rem; font-weight: 700; }
   .stat-lbl { font-size: 0.7rem; color: var(--text2); margin-top: 2px; }
   .stat-correct .stat-val { color: var(--success); }
   .stat-wrong .stat-val { color: var(--error); }
-
+ 
   .review-list { width: 100%; margin-bottom: 20px; }
   .review-item {
     background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
@@ -206,42 +211,80 @@
   .review-a .lbl { font-weight: 600; }
   .r-correct { color: var(--success); }
   .r-wrong { color: var(--error); }
-
+ 
   .results-btns { display: flex; flex-direction: column; gap: 10px; width: 100%; }
-
+ 
   /* ── TOOTH SVG HIGHLIGHTS ── */
   .tooth-highlight { fill: #bfdbfe; stroke: var(--accent); stroke-width: 2; }
-
+ 
+  /* ── USERNAME INPUT ── */
+  .user-input-wrap { width: 100%; margin-bottom: 16px; }
+  .user-input-label { font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text2); margin-bottom:8px; display:block; }
+  .user-input { width:100%; padding:14px 18px; border-radius:var(--radius); border:2px solid var(--border); background:var(--surface); font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:500; color:var(--text); outline:none; transition:border-color .2s; }
+  .user-input:focus { border-color:var(--accent); }
+  .user-input::placeholder { color:#94a3b8; }
+  .user-input-error { font-size:.8rem; color:var(--error); margin-top:6px; display:none; }
+  .user-input-error.show { display:block; }
+ 
+  /* ── TAB BAR ── */
+  .tab-bar { display:flex; width:100%; gap:0; margin-bottom:24px; background:var(--surface2); border-radius:12px; padding:4px; border:1px solid var(--border); }
+  .tab-btn { flex:1; padding:10px; border-radius:9px; border:none; font-family:'DM Sans',sans-serif; font-size:.85rem; font-weight:600; cursor:pointer; transition:all .2s; background:transparent; color:var(--text2); }
+  .tab-btn.active { background:var(--surface); color:var(--text); box-shadow:var(--shadow); }
+ 
+  /* ── RANKING ── */
+  #ranking-screen { justify-content:flex-start; gap:0; padding-top:32px; }
+  .ranking-header { width:100%; margin-bottom:20px; }
+  .ranking-header h2 { font-family:'DM Serif Display',serif; font-size:1.8rem; }
+  .ranking-header p { font-size:.85rem; color:var(--text2); margin-top:4px; }
+  .ranking-list { width:100%; margin-bottom:24px; }
+  .ranking-empty { text-align:center; padding:40px 20px; color:var(--text2); font-size:.9rem; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); }
+  .ranking-item { display:flex; align-items:center; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin-bottom:8px; }
+  .ranking-item.top-1 { border-color:#f59e0b; background:#fffbeb; }
+  .ranking-item.top-2 { border-color:#94a3b8; background:#f8fafc; }
+  .ranking-item.top-3 { border-color:#b45309; background:#fef3c7; }
+  .rank-pos { min-width:32px; height:32px; border-radius:8px; background:var(--surface2); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.9rem; color:var(--text2); }
+  .top-1 .rank-pos { background:#f59e0b; color:white; }
+  .top-2 .rank-pos { background:#94a3b8; color:white; }
+  .top-3 .rank-pos { background:#b45309; color:white; }
+  .rank-name { flex:1; font-weight:600; font-size:.95rem; }
+  .rank-score { font-weight:700; font-size:1rem; color:var(--accent); }
+  .rank-badge { font-size:.7rem; font-weight:700; background:var(--accent-light); color:var(--accent); padding:2px 8px; border-radius:99px; }
+ 
   /* ── RESPONSIVE ── */
   @media (max-width: 380px) {
     h1.brand { font-size: 2.2rem; }
     .q-text { font-size: 0.95rem; }
   }
-
   /* ── INTRO ANIM ── */
   @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .anim-in { animation: slideUp .35s ease both; }
 </style>
 </head>
 <body>
-
+ 
 <!-- ══════════ HOME ══════════ -->
 <div id="home" class="screen active">
-  <div class="logo-wrap anim-in">
+<div class="logo-wrap anim-in">
     <div class="logo-icon">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2C9.5 2 7.5 3.5 6.5 5.5C5.5 3.5 3.5 2 1 2C1 8 4 11 6.5 13C6.5 17 8 22 10 22C11 22 11.5 20 12 18C12.5 20 13 22 14 22C16 22 17.5 17 17.5 13C20 11 23 8 23 2C20.5 2 18.5 3.5 17.5 5.5C16.5 3.5 14.5 2 12 2Z"/>
       </svg>
     </div>
     <h1 class="brand">Denta<span>Quiz</span></h1>
-    <p class="tagline">Aprende odontología jugando</p>
+    <p class="tagline">Aprende Odontología Jugando</p>
   </div>
-
+ 
+  <div class="user-input-wrap anim-in" style="animation-delay:.05s">
+    <label class="user-input-label" for="usernameInput">Tu nombre de jugador</label>
+    <input class="user-input" id="usernameInput" type="text" placeholder="Ej: Vicente Hernández" maxlength="30" autocomplete="off"/>
+    <div class="user-input-error" id="usernameError">Escribe tu nombre para continuar</div>
+  </div>
+ 
   <div class="home-card anim-in" style="animation-delay:.08s">
     <h2>¿Qué aprenderás?</h2>
-    <p>Numeración dental (FDI &amp; Universal), anatomía de la dentadura permanente e inervación nerviosa. 3 tipos de pregunta con retroalimentación inmediata.</p>
+    <p>Numeración dental (FDI &amp; Universal), Anatomía de la dentadura permanente e inervación nerviosa. Tres tipos de pregunta con retroalimentación inmediata.</p>
   </div>
-
+ 
   <p style="font-size:.8rem;color:var(--text2);margin-bottom:12px;align-self:flex-start;font-weight:600;text-transform:uppercase;letter-spacing:.06em">Modo de juego</p>
   <div class="mode-grid">
     <div class="mode-btn selected" data-mode="rapido" onclick="selectMode(this)">
@@ -265,10 +308,23 @@
       <div class="mode-sub">Solo nervios</div>
     </div>
   </div>
-
+ 
   <button class="btn btn-primary anim-in" style="animation-delay:.18s" onclick="startGame()">Comenzar &rarr;</button>
+ 
+  <div style="height:20px"></div>
+  <button class="btn btn-secondary" onclick="showScreen('ranking-screen'); renderRanking()">🏆 Ver Ranking</button>
 </div>
-
+ 
+<!-- ══════════ RANKING ══════════ -->
+<div id="ranking-screen" class="screen">
+  <div class="ranking-header anim-in">
+    <h2>🏆 Ranking</h2>
+    <p>Mejores puntuaciones registradas</p>
+  </div>
+  <div class="ranking-list" id="rankingList"></div>
+  <button class="btn btn-secondary" onclick="showScreen('home')">← Volver al menú</button>
+</div>
+ 
 <!-- ══════════ GAME ══════════ -->
 <div id="game" class="screen" style="padding:0; flex-direction:column; align-items:center;">
   <div class="game-header">
@@ -279,7 +335,7 @@
     </div>
     <div class="timer-bar"><div class="timer-fill" id="timerFill" style="width:100%; background:var(--accent)"></div></div>
   </div>
-
+ 
   <div class="q-wrap" id="qWrap">
     <div class="q-card" id="qCard">
       <span class="q-type-badge" id="qBadge">Numeración</span>
@@ -287,15 +343,15 @@
       <div class="tooth-diagram" id="toothDiagram" style="display:none"></div>
     </div>
   </div>
-
+ 
   <div class="options-wrap" id="optionsWrap"></div>
-
+ 
   <div class="feedback-banner" id="feedbackBanner"></div>
   <div class="next-btn-wrap" id="nextBtnWrap">
     <button class="btn btn-primary" onclick="nextQuestion()">Siguiente →</button>
   </div>
 </div>
-
+ 
 <!-- ══════════ RESULTS ══════════ -->
 <div id="results" class="screen">
   <div class="result-hero anim-in">
@@ -308,156 +364,157 @@
     <h2 class="result-title" id="resultTitle">¡Excelente!</h2>
     <p class="result-sub" id="resultSub">Puntuación final</p>
   </div>
-
+ 
   <div class="stats-grid">
     <div class="stat-card stat-correct"><div class="stat-val" id="statCorrect">0</div><div class="stat-lbl">Correctas</div></div>
     <div class="stat-card stat-wrong"><div class="stat-val" id="statWrong">0</div><div class="stat-lbl">Incorrectas</div></div>
     <div class="stat-card"><div class="stat-val" id="statScore">0</div><div class="stat-lbl">Puntos</div></div>
   </div>
-
+ 
   <div class="review-list" id="reviewList"></div>
-
+ 
   <div class="results-btns">
     <button class="btn btn-primary" onclick="startGame()">Jugar de nuevo</button>
+    <button class="btn btn-secondary" onclick="showScreen('ranking-screen'); renderRanking()">🏆 Ver Ranking</button>
     <button class="btn btn-secondary" onclick="showScreen('home')">Menú principal</button>
   </div>
 </div>
-
+ 
 <script>
 // ════════════════════════════════════════
 //  QUESTION BANK
 // ════════════════════════════════════════
 const ALL_QUESTIONS = [
-
+ 
   // ── NUMERACIÓN FDI ──
   { type:"numeracion", badge:"Numeración FDI",
     text:"En el sistema FDI, ¿a qué diente corresponde el número <strong>11</strong>?",
     options:["Incisivo central superior derecho","Incisivo lateral superior izquierdo","Canino superior derecho","Incisivo central inferior derecho"],
     answer:0, explain:"En FDI, el primer dígito indica el cuadrante (1=superior derecho) y el segundo la posición (1=incisivo central). → Diente 11." },
-
+ 
   { type:"numeracion", badge:"Numeración FDI",
     text:"¿Qué diente es el <strong>26</strong> en el sistema FDI?",
     options:["Primer molar superior izquierdo","Segundo premolar superior izquierdo","Primer premolar superior izquierdo","Segundo molar superior izquierdo"],
     answer:0, explain:"Cuadrante 2 (superior izquierdo), posición 6 → primer molar superior izquierdo." },
-
+ 
   { type:"numeracion", badge:"Numeración FDI",
     text:"¿Cuál es el número FDI del <strong>canino inferior derecho</strong>?",
     options:["43","33","13","23"],
     answer:0, explain:"Cuadrante 4 (inferior derecho), posición 3 → canino inferior derecho = 43." },
-
+ 
   { type:"numeracion", badge:"Numeración FDI",
     text:"El diente <strong>47</strong> (FDI) corresponde a:",
     options:["Segundo molar inferior derecho","Tercer molar inferior derecho","Primer molar inferior izquierdo","Segundo premolar inferior derecho"],
     answer:0, explain:"Cuadrante 4 (inferior derecho), posición 7 → segundo molar inferior derecho." },
-
+ 
   { type:"numeracion", badge:"Numeración FDI",
     text:"En sistema FDI, ¿qué diente es el <strong>38</strong>?",
     options:["Tercer molar inferior izquierdo (muela del juicio)","Segundo molar inferior izquierdo","Segundo molar superior izquierdo","Tercer molar superior izquierdo"],
     answer:0, explain:"Cuadrante 3 (inferior izquierdo), posición 8 → tercer molar (cordal) inferior izquierdo." },
-
+ 
   { type:"numeracion", badge:"Numeración FDI",
     text:"¿Cuántos dientes componen la dentadura permanente completa?",
     options:["32","28","30","24"],
     answer:0, explain:"La dentadura permanente completa consta de 32 dientes incluyendo los 4 terceros molares (muelas del juicio)." },
-
+ 
   { type:"numeracion", badge:"Numeración Universal",
     text:"En el sistema Universal (ADA), el diente <strong>#8</strong> corresponde a:",
     options:["Incisivo central superior derecho","Incisivo lateral superior derecho","Incisivo central superior izquierdo","Canino superior derecho"],
     answer:0, explain:"En el sistema Universal, la numeración comienza en el tercer molar superior derecho (#1) y sigue en sentido horario. El #8 es el incisivo central superior derecho." },
-
+ 
   { type:"numeracion", badge:"Numeración Universal",
     text:"En sistema Universal, ¿qué número tiene el <strong>primer molar inferior izquierdo</strong>?",
     options:["19","30","14","21"],
     answer:0, explain:"Primer molar inferior izquierdo = #19 en sistema Universal (ADA)." },
-
+ 
   // ── FIGURA / DIAGRAMA ──
   { type:"figura", badge:"Identificación Visual",
     text:"Observa el diagrama. El diente <strong>resaltado en azul</strong> corresponde al cuadrante superior derecho, posición 4. ¿Cuál es su nombre?",
     highlight: {fdi:"14", arch:"upper", pos:4, side:"right"},
     options:["Primer premolar superior derecho","Segundo premolar superior derecho","Canino superior derecho","Primer molar superior derecho"],
     answer:0, explain:"Cuadrante 1, posición 4 = primer premolar superior derecho (diente 14 FDI)." },
-
+ 
   { type:"figura", badge:"Identificación Visual",
     text:"El diente <strong>resaltado</strong> es el 36 (FDI). ¿Cómo se llama?",
     highlight: {fdi:"36", arch:"lower", pos:6, side:"left"},
     options:["Primer molar inferior izquierdo","Segundo premolar inferior izquierdo","Segundo molar inferior izquierdo","Canino inferior izquierdo"],
     answer:0, explain:"Cuadrante 3 (inferior izquierdo), posición 6 → primer molar inferior izquierdo." },
-
+ 
   { type:"figura", badge:"Identificación Visual",
     text:"El diente resaltado en el diagrama es el <strong>23</strong> (FDI). Identifícalo:",
     highlight: {fdi:"23", arch:"upper", pos:3, side:"left"},
     options:["Canino superior izquierdo","Canino superior derecho","Incisivo lateral superior izquierdo","Primer premolar superior izquierdo"],
     answer:0, explain:"Cuadrante 2 (superior izquierdo), posición 3 → canino superior izquierdo (diente 23)." },
-
+ 
   { type:"figura", badge:"Identificación Visual",
     text:"Identifica el diente resaltado (<strong>41</strong> FDI):",
     highlight: {fdi:"41", arch:"lower", pos:1, side:"right"},
     options:["Incisivo central inferior derecho","Incisivo lateral inferior derecho","Incisivo central inferior izquierdo","Canino inferior derecho"],
     answer:0, explain:"Cuadrante 4 (inferior derecho), posición 1 → incisivo central inferior derecho (41)." },
-
+ 
   // ── INERVACIÓN ──
   { type:"nervio", badge:"Inervación",
     text:"¿Qué nervio inerva los <strong>incisivos inferiores</strong>?",
     options:["Nervio mentoniano (rama del dentario inferior)","Nervio infraorbitario","Nervio nasopalatino","Nervio bucal largo"],
     answer:0, explain:"Los incisivos inferiores reciben inervación del nervio dentario inferior (alveolar inferior), cuya rama terminal es el nervio mentoniano." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"Los <strong>molares superiores</strong> son inervados principalmente por:",
     options:["Nervios alveolares superiores (anterior, medio y posterior)","Nervio mentoniano","Nervio lingual","Nervio bucal"],
     answer:0, explain:"Los molares superiores reciben inervación de los nervios alveolares superiores posterior, medio y anterior, ramas del nervio maxilar (V2)." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"¿Qué nervio inerva la <strong>pulpa de los caninos superiores</strong>?",
     options:["Nervio alveolar superior anterior (rama del infraorbitario)","Nervio alveolar inferior","Nervio palatino mayor","Nervio nasopalatino"],
     answer:0, explain:"El nervio alveolar superior anterior, rama del nervio infraorbitario (V2), inerva incisivos y caninos superiores." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"El nervio <strong>dentario inferior</strong> (alveolar inferior) es rama de:",
     options:["Nervio mandibular (V3 del trigémino)","Nervio maxilar (V2 del trigémino)","Nervio oftálmico (V1 del trigémino)","Nervio facial (VII)"],
     answer:0, explain:"El nervio dentario inferior es rama del nervio mandibular (V3), tercera división del nervio trigémino (V)." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"¿Qué nervio inerva el <strong>paladar duro</strong> en la zona de premolares y molares superiores?",
     options:["Nervio palatino mayor","Nervio nasopalatino","Nervio infraorbitario","Nervio bucal"],
     answer:0, explain:"El nervio palatino mayor (del ganglio pterigopalatino) inerva la mucosa del paladar duro a nivel de premolares y molares." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"Los <strong>premolares inferiores</strong> reciben inervación principalmente del:",
     options:["Nervio alveolar inferior y nervio mentoniano","Nervio bucal largo","Nervio lingual","Nervio infraorbitario"],
     answer:0, explain:"Los premolares inferiores son inervados por el nervio alveolar inferior y, en su aspecto vestibular anterior, por el nervio mentoniano." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"¿Qué nervio inerva la <strong>mucosa lingual</strong> de los dientes inferiores?",
     options:["Nervio lingual (rama de V3)","Nervio alveolar inferior","Nervio hipogloso (XII)","Nervio mentoniano"],
     answer:0, explain:"El nervio lingual, rama del nervio mandibular (V3), inerva la mucosa lingual y el suelo de la boca." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"El <strong>nervio nasopalatino</strong> inerva:",
     options:["Paladar duro anterior y encía palatina de incisivos superiores","Molares superiores","Premolares inferiores","Caninos inferiores"],
     answer:0, explain:"El nervio nasopalatino (nervio esfenopalatino medial) inerva la mucosa del paladar duro en su tercio anterior, a nivel de los incisivos." },
-
+ 
   { type:"nervio", badge:"Inervación",
     text:"¿Cuál es el nervio que se bloquea en la <strong>anestesia troncular mandibular</strong>?",
     options:["Nervio alveolar inferior (dentario inferior)","Nervio nasopalatino","Nervio infraorbitario","Nervio palatino mayor"],
     answer:0, explain:"La anestesia troncular mandibular (bloqueo del nervio alveolar inferior) anestesia los dientes inferiores del lado del bloqueo, labio inferior y mentón." },
 ];
-
+ 
 // ════════════════════════════════════════
 //  DENTAL DIAGRAM SVG BUILDER
 // ════════════════════════════════════════
 function buildDentalSVG(highlight) {
   // highlight = { arch, pos, side }
   // Simple schematic of 16 upper + 16 lower teeth
-
+ 
   const toothData = [];
   // Upper: R (8 teeth pos 8→1) then L (pos 1→8)
   // Lower: R (8 teeth pos 8→1) then L (pos 1→8)
-
+ 
   const totalW = 340, upperY = 10, lowerY = 90, rowH = 60;
   const toothW = [13,12,11,14,14,16,18,18]; // width per pos (8→1)
   const totalToothW = toothW.reduce((a,b)=>a+b,0)*2;
   const startX = (totalW - totalToothW) / 2;
-
+ 
   // Build positions
   ['upper','lower'].forEach(arch => {
     const y = arch==='upper' ? upperY : lowerY;
@@ -476,23 +533,23 @@ function buildDentalSVG(highlight) {
       x += w + 1;
     }
   });
-
+ 
   const svgParts = [`<svg viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans, sans-serif">`];
-
+ 
   // Labels
   svgParts.push(`<text x="170" y="8" font-size="7" fill="#94a3b8" text-anchor="middle">SUPERIOR</text>`);
   svgParts.push(`<text x="170" y="158" font-size="7" fill="#94a3b8" text-anchor="middle">INFERIOR</text>`);
   svgParts.push(`<text x="85" y="148" font-size="6.5" fill="#94a3b8" text-anchor="middle">DERECHO</text>`);
   svgParts.push(`<text x="255" y="148" font-size="6.5" fill="#94a3b8" text-anchor="middle">IZQUIERDO</text>`);
   svgParts.push(`<line x1="170" y1="0" x2="170" y2="160" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>`);
-
+ 
   toothData.forEach(t => {
     const isHL = highlight && t.arch===highlight.arch && t.pos===highlight.pos && t.side===highlight.side;
     const rx = t.arch==='upper' ? '4 4 2 2' : '2 2 4 4';
     const fill = isHL ? '#93c5fd' : '#f8fafc';
     const stroke = isHL ? '#2563eb' : '#cbd5e1';
     const sw = isHL ? 2 : 1;
-
+ 
     // Tooth shape
     if(t.arch==='upper') {
       svgParts.push(`<rect x="${t.x}" y="${t.y}" width="${t.w}" height="${t.h}" rx="3" ry="3" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`);
@@ -505,15 +562,16 @@ function buildDentalSVG(highlight) {
       svgParts.push(`<line x1="${mid}" y1="${t.y+t.h}" x2="${mid}" y2="${t.y+t.h+6}" stroke="${isHL?'#2563eb':'#cbd5e1'}" stroke-width="${isHL?2:1}"/>`);
     }
   });
-
+ 
   svgParts.push('</svg>');
   return svgParts.join('');
 }
-
+ 
 // ════════════════════════════════════════
 //  GAME STATE
 // ════════════════════════════════════════
 let gameMode = 'rapido';
+let currentUsername = '';
 let questions = [];
 let currentQ = 0;
 let score = 0;
@@ -524,19 +582,62 @@ let timerInterval = null;
 let timerLeft = 0;
 const TIMER = 20; // seconds
 let answers = []; // for review
-
+ 
+// ── RANKING (localStorage) ──
+function getRanking() {
+  try { return JSON.parse(localStorage.getItem('dentaquiz_ranking') || '[]'); }
+  catch(e) { return []; }
+}
+function saveRanking(ranking) {
+  try { localStorage.setItem('dentaquiz_ranking', JSON.stringify(ranking)); } catch(e) {}
+}
+function updateRanking(name, pts) {
+  const ranking = getRanking();
+  const key = name.trim().toLowerCase();
+  const idx = ranking.findIndex(r => r.name.trim().toLowerCase() === key);
+  if(idx === -1) {
+    ranking.push({ name: name.trim(), score: pts });
+  } else if(pts > ranking[idx].score) {
+    ranking[idx].score = pts;
+  }
+  ranking.sort((a,b) => b.score - a.score);
+  saveRanking(ranking);
+}
+function renderRanking() {
+  const ranking = getRanking();
+  const el = document.getElementById('rankingList');
+  if(!ranking.length) {
+    el.innerHTML = '<div class="ranking-empty">🦷 Aún no hay puntuaciones.<br>¡Sé el primero en jugar!</div>';
+    return;
+  }
+  const medals = ['🥇','🥈','🥉'];
+  el.innerHTML = ranking.map((r, i) => {
+    const topClass = i < 3 ? ` top-${i+1}` : '';
+    const medal = medals[i] || '';
+    return `<div class="ranking-item${topClass}">
+      <div class="rank-pos">${i+1}</div>
+      <div class="rank-name">${escapeHtml(r.name)}</div>
+      ${medal ? `<span style="font-size:1.2rem">${medal}</span>` : ''}
+      <div class="rank-score">${r.score} pts</div>
+    </div>`;
+  }).join('');
+}
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+ 
 function selectMode(el) {
   document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('selected'));
   el.classList.add('selected');
   gameMode = el.dataset.mode;
 }
-
+ 
 function shuffle(arr) {
   const a = [...arr];
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
   return a;
 }
-
+ 
 function filterQuestions() {
   let pool;
   if(gameMode==='numeracion') pool = ALL_QUESTIONS.filter(q=>q.type==='numeracion'||q.type==='figura');
@@ -545,33 +646,42 @@ function filterQuestions() {
   const count = gameMode==='completo' ? 20 : 10;
   return shuffle(pool).slice(0, Math.min(count, pool.length));
 }
-
+ 
 function startGame() {
+  const input = document.getElementById('usernameInput');
+  const errEl = document.getElementById('usernameError');
+  const name = input ? input.value.trim() : currentUsername;
+  if(!name) {
+    if(errEl) { errEl.classList.add('show'); input.focus(); }
+    return;
+  }
+  if(errEl) errEl.classList.remove('show');
+  currentUsername = name;
   questions = filterQuestions();
   currentQ = 0; score = 0; correct = 0; wrong = 0; answers = [];
   showScreen('game');
   renderQuestion();
 }
-
+ 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo(0,0);
 }
-
+ 
 function renderQuestion() {
   const q = questions[currentQ];
   answered = false;
-
+ 
   // Header
   document.getElementById('qCounter').textContent = `${currentQ+1} / ${questions.length}`;
   document.getElementById('progressFill').style.width = `${(currentQ/questions.length)*100}%`;
   document.getElementById('scorePill').textContent = `${score} pts`;
-
+ 
   // Question card
   document.getElementById('qBadge').textContent = q.badge;
   document.getElementById('qText').innerHTML = q.text;
-
+ 
   // Diagram
   const diag = document.getElementById('toothDiagram');
   if(q.type==='figura' && q.highlight) {
@@ -580,7 +690,7 @@ function renderQuestion() {
   } else {
     diag.style.display='none';
   }
-
+ 
   // Options
   const wrap = document.getElementById('optionsWrap');
   wrap.innerHTML = '';
@@ -592,14 +702,14 @@ function renderQuestion() {
     btn.onclick = () => selectAnswer(i);
     wrap.appendChild(btn);
   });
-
+ 
   // Feedback
   const fb = document.getElementById('feedbackBanner');
   fb.className = 'feedback-banner';
   fb.textContent = '';
-
+ 
   document.getElementById('nextBtnWrap').classList.remove('show');
-
+ 
   // Timer
   clearInterval(timerInterval);
   timerLeft = TIMER;
@@ -610,7 +720,7 @@ function renderQuestion() {
     if(timerLeft <= 0) { clearInterval(timerInterval); autoTimeout(); }
   }, 1000);
 }
-
+ 
 function updateTimer(left, total) {
   const pct = (left / total) * 100;
   const fill = document.getElementById('timerFill');
@@ -619,7 +729,7 @@ function updateTimer(left, total) {
   else if(pct > 25) fill.style.background = '#f59e0b';
   else fill.style.background = 'var(--error)';
 }
-
+ 
 function autoTimeout() {
   if(answered) return;
   const q = questions[currentQ];
@@ -631,7 +741,7 @@ function autoTimeout() {
   document.getElementById('nextBtnWrap').classList.add('show');
   answered = true;
 }
-
+ 
 function selectAnswer(idx) {
   if(answered) return;
   clearInterval(timerInterval);
@@ -642,55 +752,58 @@ function selectAnswer(idx) {
   const pts = isCorrect ? (100 + timeBonus) : 0;
   score += pts;
   if(isCorrect) correct++; else wrong++;
-
+ 
   answers.push({q: q.text.replace(/<[^>]+>/g,''), given:idx, correct:q.answer, correctText: q.options[q.answer], explain: q.explain, isCorrect});
-
+ 
   lockOptions();
   highlightCorrect(q.answer);
   const btns = document.querySelectorAll('.opt-btn');
   if(!isCorrect) btns[idx].classList.add('wrong');
-
+ 
   showFeedback(isCorrect, (isCorrect ? `✓ ¡Correcto! +${pts} puntos. ` : `✗ Incorrecto. `) + q.explain);
   document.getElementById('nextBtnWrap').classList.add('show');
 }
-
+ 
 function lockOptions() {
   document.querySelectorAll('.opt-btn').forEach(b => b.classList.add('locked'));
 }
-
+ 
 function highlightCorrect(idx) {
   document.querySelectorAll('.opt-btn')[idx].classList.add('correct');
 }
-
+ 
 function showFeedback(ok, msg) {
   const fb = document.getElementById('feedbackBanner');
   fb.textContent = msg;
   fb.className = 'feedback-banner show ' + (ok ? 'correct-fb' : 'wrong-fb');
 }
-
+ 
 function nextQuestion() {
   currentQ++;
   if(currentQ >= questions.length) showResults();
   else renderQuestion();
 }
-
+ 
 function showResults() {
   clearInterval(timerInterval);
   const total = questions.length;
   const pct = Math.round((correct/total)*100);
-
+ 
   document.getElementById('scoreBig').textContent = correct;
   document.getElementById('scoreDenom').textContent = `/ ${total}`;
   document.getElementById('scoreRing').style.setProperty('--pct', pct+'%');
-
+ 
   const titles = pct>=90?'¡Excelente dominio!':pct>=70?'¡Muy bien!':pct>=50?'¡Buen intento!':'Sigue practicando';
   document.getElementById('resultTitle').textContent = titles;
-  document.getElementById('resultSub').textContent = `${pct}% de aciertos · ${score} puntos totales`;
-
+  document.getElementById('resultSub').textContent = `${currentUsername} · ${pct}% de aciertos · ${score} puntos`;
+ 
   document.getElementById('statCorrect').textContent = correct;
   document.getElementById('statWrong').textContent = wrong;
   document.getElementById('statScore').textContent = score;
-
+ 
+  // Save to ranking
+  updateRanking(currentUsername, score);
+ 
   // Review
   const rl = document.getElementById('reviewList');
   rl.innerHTML = '<p style="font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);margin-bottom:12px">Revisión de respuestas</p>';
@@ -703,12 +816,17 @@ function showResults() {
       <div class="review-a ${cls}"><span class="lbl">${icon} Correcta:</span> ${a.correctText}</div>`;
     rl.appendChild(div);
   });
-
+ 
   showScreen('results');
 }
-
+ 
 // Init
 document.addEventListener('DOMContentLoaded', () => {});
 </script>
+ 
+<footer style="width:100%;max-width:520px;padding:24px 20px 32px;text-align:center;font-size:0.75rem;color:var(--text2);line-height:1.6;border-top:1px solid var(--border);margin-top:auto;">
+  Proyecto realizado por <strong style="color:var(--text)">Arturo García Revilla</strong> para la asignatura <em>Anatomía Especial</em>
+</footer>
 </body>
 </html>
+ 
